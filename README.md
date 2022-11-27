@@ -1,18 +1,12 @@
-## Getting Started
+# Notes Application
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This application uses CRUD and file handling.
 
-## Folder Structure
+## Structure of the Application
 
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- Main.java - In this repository you will find the Main where i put the code that make this program run.  
+- Models - This is the folder containing all of the other java files.  
+  - DateTime.java - This file contains the code required to get the current date and time.   
+  - FileHandling.java - This file contains the code for writing, or reading the file.   
+  - Notes.java - This file contains the code for the methods needed by a notes app.   
+- notes.txt - This is a file that holds the output for the FileHandling.
