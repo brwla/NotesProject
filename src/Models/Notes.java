@@ -18,14 +18,14 @@ public class Notes{
             listOfLines = file.readFile();
             textList.clear();
             dateList.clear();
-            for(int i = 0; i <listOfLines.size(); i++){
+            for(int i = 0; i < listOfLines.size(); i++){
                 String line = listOfLines.get(i);
                 String[] stringSplit = line.split(" / ");
                 textList.add(stringSplit[0]);
                 dateList.add(stringSplit[1]);
             }
         } catch (Exception e) {
-            System.out.println("An error ocurred.");
+            System.out.println("An error occurred.");
         }
     }
 
@@ -38,7 +38,7 @@ public class Notes{
             dateList.add(date.getDate());
             file.writeFile(textList, dateList);
         } catch (Exception e) {
-            System.out.println("\nAn error occured.");
+            System.out.println("\nAn error occurred.");
         }
     }
 
@@ -50,7 +50,7 @@ public class Notes{
                 System.out.print("\t" + dateList.get(i) + '\n');
             }
         } catch (Exception e) {
-            System.out.println("\nAn error occured.");
+            System.out.println("\nAn error occurred.");
         }
     }
 
@@ -67,7 +67,7 @@ public class Notes{
             dateList.set(index, date.getDate());
             file.writeFile(textList, dateList);
         }catch(InputMismatchException e) {
-            System.out.println("\nInvalid choice.");
+            System.out.println("\nYou did not enter a number.");
             in.nextLine();
         }catch(IndexOutOfBoundsException f){
             System.out.println("\nInvalid choice.");
@@ -83,7 +83,11 @@ public class Notes{
             textList.remove(idx);
             dateList.remove(idx);
             file.writeFile(textList, dateList);
-        }catch(InputMismatchException | IndexOutOfBoundsException e){
+            in.nextLine();
+        }catch(InputMismatchException e){
+            System.out.println("\nYou did not enter a number.");
+            in.nextLine();
+        }catch(IndexOutOfBoundsException f){
             System.out.println("\nInvalid choice.");
             in.nextLine();
         }

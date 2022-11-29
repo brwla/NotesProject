@@ -23,7 +23,7 @@ public class FileHandling {
             if (fileObj.length() == 0){
                 //continue
             }else{
-                System.out.println("An error ocurred.");
+                System.out.println("An error occurred.");
             }
         }
         return listOfText;
